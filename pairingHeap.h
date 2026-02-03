@@ -158,8 +158,12 @@ public:
             Node* nextPair = child->next->next;
             Node* second = child->next;
 
+            //disconnect each subheap from its siblings
             child->next = nullptr;
+            child->prev = nullptr;
             second->next = nullptr;
+            second->prev = nullptr;
+
             Node* melded = meld(child, second);
             return meld(melded, mergePairs(nextPair));
         }
