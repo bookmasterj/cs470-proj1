@@ -136,6 +136,8 @@ public:
                 this->root = nullptr;
             }
             else {
+                //reset child's prev pointer so it no longer points to removed root
+                this->root->child->prev = nullptr;
                 //remove the root by merging root's children
                 this->root = mergePairs(this->root->child);
             }
