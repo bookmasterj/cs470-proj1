@@ -29,8 +29,10 @@ jobs:
           languages: ${{ matrix.language }}
           #queries:  security-extended,security-and-quality # optional suites
       # For compiled languages, try Autobuild first (ignored for script languages)
-      - name: Autobuild 
-        uses: github/codeql-action/autobuild@v3
+      - name: Build C++ Programs
+        run: |
+          g++ -O2 Dijkstra.cpp -o Dijkstra.exe
+          g++ -O2 Prim.cpp -o Prim.exe
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
