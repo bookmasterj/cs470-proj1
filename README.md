@@ -1,6 +1,6 @@
 # cs470-proj1
 
-Team Members: Jasmine Pierre, Sam Barskiy, Porter Clark, Javier Caldwell
+Team Members: Jasmine Pierre, Sam Barskiy, Porter Clark, Javier Caldwell (me)
 
 This project compares and contrasts two priority queues, the fibonacci heap and the pairing heap, in the context of their implementation in Prim's and Dijkstra's algorithms.
 
